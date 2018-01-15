@@ -1,0 +1,381 @@
+@import fonts
+@import base
+@import vars
+@import circle
+@import order
+
+
+textarea
+	resize: none
+
+h2
+	margin: 0\2
+	margin-bottom: 10px
+	text-transform: uppercase
+.wrapper
+	grid-template-columns: repeat(12, 1fr)
+.header
+	grid-column: span 12
+	grid-template-columns: repeat(3, min-content) repeat(9, 1fr)
+	grid-template-rows: min-content 1fr min-content 1fr
+	background: url('../img/background.jpeg')
+	height: 100vh
+	background-position: center
+	background-size: cover
+	color: $white
+	position: relative
+	&::before
+		content: ''
+		background: #262526
+		opacity: 0.8
+		position: absolute
+		width: 100%
+		height: 100%
+	.link
+		justify-self: center
+		margin-bottom: 20%
+		z-index: 1
+		a
+			font-size: 1.2em
+			font-weight: 400
+			text-decoration: none
+			text-transform: uppercase
+			color: $white
+			padding-left: 20px
+			transition: 0.5s
+			&:hover
+				color: $darc
+		.active
+			color: $darc
+	h1
+		grid-column: span 12
+		grid-row: 2
+		justify-self: center
+		align-self: end
+		font-size: 5em
+		margin: 0
+		font-size: 13em
+		z-index: 1
+		height: 65%
+	.hr
+		grid-column: span 12
+		grid-row: 3
+		min-width: 750px
+		height: 1px
+		background: $white
+		z-index: 1
+		justify-self: center
+	h3
+		grid-column: span 12
+		justify-self: center
+		grid-row: 4
+		margin: 0
+		font-weight: 100
+		z-index: 1
+		font-size: 100px
+		// margin-top: -25px
+		font-weight: 100
+.section
+	grid-column: span 12
+	grid-template-columns: repeat(12, 1fr)
+	color: $darc
+	h2
+		grid-column: span 12
+		justify-self: center
+		text-transform: uppercase
+	article
+		grid-column: 2/span 4
+		font-size: 1.2em
+		text-indent: 20px
+		p
+			margin-top: 0
+			font-style: italic
+	.photo
+		grid-column: 8/span 4
+		justify-self: end
+		img
+			width: 55%
+			height: auto
+			border-radius: 100%
+	.hrwert
+		grid-column: 6/8
+		hr
+			height: 90%
+			width: 1px
+			background: $darc
+			border: none
+	.hrgor
+		grid-column: span 12
+		margin-top: 2%
+		hr
+			width: 90%
+			height: 1px
+			background: $darc
+			border: none
+.portfolio
+	grid-column: 2/span 10
+	grid-template-columns: repeat(12, 1fr)
+	img
+		background-size: cover
+		background-position: center
+		width: 100%
+		filter: grayscale(100%)
+		transition: 1s
+		margin-top: -8px
+		&:hover
+			filter: grayscale(0%)
+	h2
+		grid-column: span 12
+		justify-self: center
+		text-transform: uppercase
+	.portfolioimg
+		grid-column: span 12
+		grid-template-columns: repeat(auto-fit,minmax(150px, 1fr))
+		.img
+			grid-column: span 4
+			display: grid
+			align-items: stretch
+			position: relative
+			transition: all 1s
+			a
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					width: 15%
+					height: 15%
+					left: 45%
+					top: 45%
+					background: url("../img/download.svg") no-repeat
+					z-index: 1
+					opacity: 0
+				&:hover
+					&::before
+						transition: 1s
+						opacity: 1
+.dosite
+	grid-column: span 12
+	grid-template-columns: repeat(12, 1fr)
+	background-image: url("../img/steps.png")
+	margin-top: 5%
+	h2
+		grid-column: span 12
+		justify-self: center
+		text-transform: uppercase
+		color: $darc
+	.boxcontainer
+		grid-column: 2/ span 10
+		justify-items: center
+		align-items: center
+		align-content: center
+		grid-template-columns: repeat(3, max-content)
+		grid-column-gap: 50px
+		justify-content: center
+		margin: 5% 0
+		.box
+			display: grid
+			grid-column: span 1
+			background: $lightplus
+			justify-content: center
+			width: 300px
+			height: 300px
+			border-radius: 100%
+			transition: all 1s
+			h2
+				text-align: center
+				align-self: center
+				font-size: 3em
+				z-index: 1
+			span
+				margin-top: -25%
+				text-transform: uppercase
+				font-weight: 500
+				font-size: 1.5em
+				z-index: 1
+		.box:nth-of-type(1)
+			&:hover
+				background: #D99D26	
+		.box:nth-of-type(2)
+			&:hover
+					background: #E7E453	
+		.box:nth-of-type(3)
+				&:hover
+					background: #A4B650 	
+.costs
+	grid-column: span 12
+	grid-template-columns: 12% repeat(4, 1fr) 12% 
+	grid-column-gap: 2%
+	h2
+		grid-column: span 6
+		text-align: center
+		padding: 0px 10px
+	.costsall
+		border: $border
+		grid-template-rows: repeat(4, min-content) 1fr min-content
+		background: $light
+		color: $darc
+		h2
+			grid-row: 1
+			color: $darc
+			font-size: 1.5em
+			text-transform: uppercase
+		span
+			grid-row: 3
+			grid-column: span 6
+			text-align: center
+			margin: 0
+			font-weight: 100
+			font-size: 2em
+		ol
+			grid-row: 5
+		a
+			grid-row: 6
+			grid-column: span 6
+			justify-self: center
+			margin-top: 10%
+			margin-bottom: 10%
+			background: $darc
+			color: $lightplus
+			text-transform: uppercase
+			border: none
+			padding: 3% 20%
+			cursor: pointer
+			text-decoration: none
+			transition: 0.5s
+			&:hover
+				color: $black
+		.hr1
+			background: #262526
+			border: none
+			grid-row: 2
+			grid-column: span 6
+			justify-self: center
+			width: 80%
+			height: 1px
+		.hr2
+			background: #262526
+			border: none
+			grid-row: 4
+			grid-column: span 6
+			justify-self: center
+			width: 50%
+			height: 1px
+	.costsall:nth-of-type(1)
+		grid-column: 2
+	.costsall:nth-of-type(2)
+		grid-column: 3
+	.costsall:nth-of-type(3)
+		grid-column: 4
+	.costsall:nth-of-type(4)
+		grid-column: 5
+.action
+	color: red
+	font-weight: bold
+.contact
+	grid-column: span 12
+	background: url("../img/feedback.png")
+	grid-template-columns: 1fr
+	margin-top: 1vh
+	h2
+		text-align: center
+		color: $light
+		grid-column: span 1
+	.class1
+		color: $light
+	.contactbox
+		grid-column: 1
+		margin: 0 14%
+		grid-template-columns: 1fr min-content 1fr
+		background: $accentminus
+		padding: 20px
+		.address
+		grid-column: 1
+	.hrfeedback
+		width: 1px
+		height: 100%
+		margin: 0 10px
+		background: $darc
+		border: none
+		grid-column: 2
+		align-self: center
+		justify-self: center
+	.address
+		grid-template-columns: min-content 1fr
+		grid-template-rows: repeat(5, min-content)
+		grid-row-gap: 5px
+		grid-column-gap: 50px
+		justify-self: center
+		width: 70%
+		span
+			padding: 2px
+		a
+		.fa
+			align-self: center
+			color: $light
+	.feedback
+		grid-template-rows: repeat(4, min-content)
+		grid-row-gap: 5px
+		width: 70%
+		justify-self: center
+		input
+			padding: 2px
+			color: $accent
+			border: none
+		textarea
+			height: 150px
+			color: $accent
+			border: none
+		input[type="submit"]
+			width: 150px
+			justify-self: end
+			color: $accent
+			background: $white
+	footer
+		grid-template-columns: repeat(12 ,1fr)
+		margin-top: 5px
+		color: $darc
+		span:nth-of-type(1)
+			grid-column: 1/span 2
+			justify-self: center
+		span:nth-of-type(2)
+			grid-column: 7/span 2
+			justify-self: end
+		span:nth-of-type(3)
+			grid-column: 9/span 2
+			justify-self: center
+		.cosial
+			grid-column: 11 /span 2
+			a
+				color: $darc
+				text-decoration: none
+			.fa
+				padding-left: 20px
+.orderform
+	background-image: url("../img/background.jpeg")
+	width: 100%
+	height: 100vh
+	background-position: center
+	background-size: cover
+	color: $white
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		background: #262526
+		opacity: 0.6
+	h2
+		grid-column: span 12
+		justify-self: center
+		align-self: end
+		z-index: 1
+		font-size: 5em
+	p
+		grid-column: span 12
+		justify-self: center
+		align-self: start
+		z-index: 1
+		font-size: 2em
+// ADAPTIVE
+@import media
