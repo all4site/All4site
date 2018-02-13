@@ -7,26 +7,28 @@
     <!-- build:css css/main.min.css-->
     <!-- bower:css-->
     <link rel="stylesheet" href="js/xalk-font-awesome/css/font-awesome.css"/>
-    <link rel="stylesheet" href="js/normalize-css/normalize.css"/>
-    <link rel="stylesheet" href="js/animate.css/animate.css"/>
-    <link rel="stylesheet" href="js/magnific-popup/dist/magnific-popup.css"/>
+    <link rel="stylesheet" href="js/materialize/dist/css/materialize.css"/>
     <!-- endbower-->
     <link rel="stylesheet" href="css/main.min.css"/>
     <!-- endbuild-->
-    <link rel="icon" href="img/favicon.ico"/>
+    <link rel="icon" href="img/favicon.png"/>
+    <meta name="google-site-verification" content="XSxmB_YyoefRdlkC5LX015OsZbgTGi9NNUjd15J5dFk"/>
     <title>All4site</title>
   </head>
   <body>
     <wrapper class="wrapper grid">
-      <header id="top" class="header grid">
-        <div class="link"><a href="#top" class="active">главная</a></div>
-        <div class="link"><a href="#contact">контакты</a></div>
-        <div class="link"><a href="#costs">Цены</a></div>
+      <header id="top" class="header grid"><a href="#" data-activates="slide-out" class="button-collapse menu">
+          <div class="menu1"></div>
+          <div class="menu2"></div>
+          <div class="menu3"></div>
+          <div class="menu4"></div></a>
+        <div class="phone"><i class="material-icons">email</i><span>info@all4site.com.ua</span></div>
+        <div class="email"><i class="material-icons">phone_iphone</i><span>093-606-34-15</span></div>
         <h1>All4Site</h1>
-        <h3>we are creators</h3>
+        <h3>создание сайтов под ключ</h3>
         <div class="hr"></div>
       </header>
-      <section class="section grid">
+      <section id="about" class="section grid">
         <h2>о нас</h2>
         <article class="wow bounceInLeft">
           <p>Как клиенты могут узнать о Вас и о Вашем бизнесе? И что Вы можете сделать, чтобы конкурировать на рынке онлайн?</p>
@@ -44,11 +46,11 @@
         <div class="hrgor">
           <hr/>
         </div><a href="#top">
-          <div class="circle grid">
+          <div class="circle grid z-depth-3">
             <div class="circleimg"></div>
           </div></a>
       </section>
-      <section class="portfolio grid">
+      <section id="porrfolio" class="portfolio grid">
         <h2>наши работы</h2>
         <div class="portfolioimg grid">
           <div class="img wow zoomIn"><a href="http://photo.all4site.com.ua" target="_blank"><img src="img/portfolio7.jpeg" alt=""/></a></div>
@@ -71,10 +73,10 @@
           </div>
         </div>
       </section>
-      <div id="costs" class="costs grid">
+      <div id="price" class="costs grid">
         <h2>цены</h2>
-        <div data-wow-delay="0.5s" class="costsall grid wow fadeIn">
-          <h2>сайт <br/>визитка</h2>
+        <div class="costsall grid card">
+          <h2>сайт <br class="br"/>визитка</h2>
           <hr class="hr1"/><span>от 3000<br/>	грн		</span>
           <hr class="hr2"/>
           <ol type="1">
@@ -82,9 +84,9 @@
             <li>Слайд шоу</li>
             <li>Карта проезда</li>
             <li class="action">Бесплатный хостниг на год</li>
-          </ol><a href="#order1" class="order">заказать</a>
+          </ol><a href="#modal1" class="modal-trigger btn-large waves-effect waves-light hoverable">заказать</a>
         </div>
-        <div data-wow-delay="1s" class="costsall grid wow fadeIn">
+        <div class="costsall grid card">
           <h2>landing <br/>page</h2>
           <hr class="hr1"/><span>от 4000<br/>	грн		</span>
           <hr class="hr2"/>
@@ -94,9 +96,9 @@
             <li>Слайд шоу</li>
             <li>Карта проезда</li>
             <li class="action">Бесплатный хостниг на год</li>
-          </ol><a href="#order2" class="order">заказать</a>
+          </ol><a href="#modal2" class="modal-trigger btn-large waves-effect waves-light hoverable">заказать</a>
         </div>
-        <div data-wow-delay="1.5s" class="costsall grid wow fadeIn">
+        <div class="costsall grid card">
           <h2>корпоративный <br/>сайт</h2>
           <hr class="hr1"/><span>от 10000<br/>	грн		</span>
           <hr class="hr2"/>
@@ -107,9 +109,9 @@
             <li>Статистика посещеня</li>
             <li>Авторизированный вход</li>
             <li class="action">Бесплатный хостниг на год</li>
-          </ol><a href="#order3" class="order">заказать</a>
+          </ol><a href="#modal3" class="modal-trigger btn-large waves-effect waves-light hoverable">заказать</a>
         </div>
-        <div data-wow-delay="2s" class="costsall grid wow fadeIn">
+        <div class="costsall grid card">
           <h2>интернет <br/>магазин</h2>
           <hr class="hr1"/><span>от 12000<br/>	грн		</span>
           <hr class="hr2"/>
@@ -120,58 +122,82 @@
             <li>Удобная административная панель</li>
             <li>Статистика работы магазина</li>
             <li class="action">Бесплатный хостинг на год</li>
-          </ol><a href="#order4" class="order">заказать</a>
+          </ol><a href="#modal4" class="modal-trigger btn-large waves-effect waves-light hoverable">заказать</a>
         </div>
       </div>
-      <form id="order1" class="grid mfp-hide">
+      <form id="modal1" class="modal">
         <input type="hidden" name="project_name" value="Заказ сайта"/>
         <input type="hidden" name="admin_email" value="info@all4site.com.ua"/>
         <input type="hidden" name="form_subject" value="Форма заказа"/>
-        <div class="feedback grid">
-          <h3>сайт визитка</h3><span class="name">ИМЯ</span>
-          <input type="text" name="name" placeholder="name" id="name" required="required"/><span class="email">EMAIL</span>
-          <input type="text" name="email" placeholder="email" required="required"/>
+        <div class="feedback grid modal-content">
+          <h3>сайт визитка</h3>
+          <div class="input-field">
+            <input type="text" name="name" id="name" required="required" class="validate"/>
+            <label for="name">ИМЯ</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="email" required="required" class="validate"/>
+            <label for="email">EMAIL</label>
+          </div>
           <textarea name="Заказ" readonly="readonly">
              
             	Сайт Взитка.
           </textarea>
-          <input type="submit" value="заказать"/>
+          <input type="submit" value="заказать" class="modal-action btn-large waves-effect waves-light"/>
         </div>
       </form>
-      <form id="order2" class="grid mfp-hide">
+      <form id="modal2" class="modal">
         <input type="hidden" name="project_name" value="Заказ сайта"/>
         <input type="hidden" name="admin_email" value="info@all4site.com.ua"/>
         <input type="hidden" name="form_subject" value="Форма заказа"/>
-        <div class="feedback grid">
-          <h3>landing page</h3><span class="name">ИМЯ</span>
-          <input type="text" name="name" placeholder="name" id="name" required="required"/><span class="email">EMAIL</span>
-          <input type="text" name="email" placeholder="email" required="required"/>
+        <div class="feedback grid modal-content">
+          <h3>landing page</h3>
+          <div class="input-field">
+            <input type="text" name="name" id="name" required="required"/>
+            <label for="name">ИМЯ</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="email" required="required"/>
+            <label for="email">EMAIL</label>
+          </div>
           <textarea name="Заказ" readonly="readonly">Landing Page.</textarea>
-          <input type="submit" value="заказать"/>
+          <input type="submit" value="заказать" class="modal-action btn-large waves-effect waves-light"/>
         </div>
       </form>
-      <form id="order3" class="grid mfp-hide">
+      <form id="modal3" class="modal">
         <input type="hidden" name="project_name" value="Заказ сайта"/>
         <input type="hidden" name="admin_email" value="info@all4site.com.ua"/>
         <input type="hidden" name="form_subject" value="Форма заказа"/>
-        <div class="feedback grid">
-          <h3>корпоративный сайт</h3><span class="name">ИМЯ</span>
-          <input type="text" name="name" placeholder="name" id="name" required="required"/><span class="email">EMAIL</span>
-          <input type="text" name="email" placeholder="email" required="required"/>
+        <div class="feedback grid modal-content">
+          <h3>корпоративный сайт</h3>
+          <div class="input-field">
+            <input type="text" name="name" id="name" required="required"/>
+            <label for="name">ИМЯ</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="email" required="required"/>
+            <label for="email">EMAIL</label>
+          </div>
           <textarea name="Заказ" readonly="readonly">	Корпоративный сайт.</textarea>
-          <input type="submit" value="заказать"/>
+          <input type="submit" value="заказать" class="modal-action btn-large waves-effect waves-light"/>
         </div>
       </form>
-      <form id="order4" class="grid mfp-hide">
+      <form id="modal4" class="modal">
         <input type="hidden" name="project_name" value="Заказ сайта"/>
         <input type="hidden" name="admin_email" value="info@all4site.com.ua"/>
         <input type="hidden" name="form_subject" value="Форма заказа"/>
-        <div class="feedback grid">
-          <h3>интернет магазин</h3><span class="name">ИМЯ</span>
-          <input type="text" name="name" placeholder="name" id="name" required="required"/><span class="email">EMAIL</span>
-          <input type="text" name="email" placeholder="email" required="required"/>
+        <div class="feedback grid modal-content">
+          <h3>интернет магазин</h3>
+          <div class="input-field">
+            <input type="text" name="name" id="name" required="required"/>
+            <label for="name">ИМЯ</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="email" required="required"/>
+            <label for="email">EMAIL</label>
+          </div>
           <textarea name="Заказ" readonly="readonly">Интернет магзин.</textarea>
-          <input type="submit" value="заказать"/>
+          <input type="submit" value="заказать" class="modal-action btn-large waves-effect waves-light"/>
         </div>
       </form>
       <div id="contact" class="contact grid">
@@ -186,10 +212,19 @@
             <input type="hidden" name="project_name" value="Обратная связь"/>
             <input type="hidden" name="admin_email" value="info@all4site.com.ua"/>
             <input type="hidden" name="form_subject" value="Форма обратной связи"/>
-            <input type="text" name="name" placeholder="name" required="required"/>
-            <input type="text" name="email" placeholder="email" required="required"/>
-            <textarea name="text" placeholder="text..."></textarea>
-            <input type="submit" value="отправить"/>
+            <div class="input-field">
+              <input type="text" placeholder="" name="name" required="required" class="validate"/>
+              <label for="name">ИМЯ</label>
+            </div>
+            <div class="input-field">
+              <input type="text" placeholder="" name="email" required="required" class="validate"/>
+              <label for="name">EMAIL</label>
+            </div>
+            <div class="input-field">
+              <textarea name="text" placeholder=""></textarea>
+              <label for="name">TEXT</label>
+            </div>
+            <input type="submit" value="заказать" class="modal-action btn waves-effect waves-light hoverable"/>
           </form>
         </div>
         <footer class="grid"><span>2017 all4site.com.ua</span><span>093-606-34-15</span><span>info@all4site.com.ua</span>
@@ -199,12 +234,20 @@
               <div class="fa fa-youtube"></div></a></div>
         </footer>
       </div>
+      <ul id="slide-out" class="side-nav">
+        <div class="background">
+          <li><a href="#top" data-target="menu" class="waves-effect hoverable"><span>Главная</span></a></li>
+          <li><a href="#about" data-target="menu" class="waves-effect hoverable"><span>О нас</span></a></li>
+          <li><a href="#porrfolio" data-target="menu" class="waves-effect hoverable"><span>Наши работы</span></a></li>
+          <li><a href="#price" data-target="menu" class="waves-effect hoverable"><span>Цены</span></a></li>
+          <li><a href="#contact" data-target="menu" class="waves-effect hoverable"><span>Контакты</span></a></li>
+        </div>
+      </ul>
     </wrapper>
     <!-- build:js js/main.min.js-->
     <!-- bower:js-->
     <script src="js/jquery/dist/jquery.js"></script>
-    <script src="js/wow/dist/wow.js"></script>
-    <script src="js/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="js/materialize/dist/js/materialize.js"></script>
     <!-- endbower-->
     <script src="js/main.js"></script>
     <!-- endbuild-->

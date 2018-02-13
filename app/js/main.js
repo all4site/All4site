@@ -1,4 +1,8 @@
-// new WOW().init();
+  $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+    $(".button-collapse").sideNav();
+  });
 
 $(document).ready(function(){
 	$(window).scroll(function(){
@@ -25,27 +29,6 @@ $(document).ready(function() {
 	$('a[href^="#costs"]').click(function() {
 		var target = $(this).attr('href');
 		$('html, body').animate({ scrollTop: $(target).offset().top - 90 }, 1000);
-	});
-});
-
-// Кнопка заказать
-$(document).ready(function() {
-	$('.order').magnificPopup({
-		type: 'inline',
-		preloader: false,
-		focus: '#name',
-		callbacks: {
-			beforeOpen: function() {
-				if($(window).width() < 700) {
-					this.st.focus = false;
-				} else {
-					this.st.focus = '#name';
-				}
-			}
-		}
-	});
-	$("input[id='send']").click(function(){
-		$.magnificPopup.close();
 	});
 });
 

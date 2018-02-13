@@ -20,10 +20,16 @@
 			input(type='hidden', name='project_name', value='Обратная связь')
 			input(type='hidden', name='admin_email', value='info@all4site.com.ua')
 			input(type='hidden', name='form_subject', value='Форма обратной связи')
-			input(type="text" name="name" placeholder="name" required)
-			input(type="text" name="email" placeholder="email" required)
-			textarea(name="text" placeholder="text...")
-			input(type="submit" value="отправить")
+			.input-field
+				input(type="text" placeholder="" name="name" required).validate
+				label(for="name") ИМЯ
+			.input-field
+				input(type="text" placeholder="" name="email"  required).validate
+				label(for="name") EMAIL
+			.input-field
+				textarea(name="text" placeholder="")
+				label(for="name") TEXT
+			input(type="submit" value="заказать" ).modal-action.btn.waves-effect.waves-light.hoverable
 	footer.grid
 		span 2017 all4site.com.ua
 		span 093-606-34-15

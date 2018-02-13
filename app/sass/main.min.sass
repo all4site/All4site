@@ -9,15 +9,13 @@ textarea
 	resize: none
 
 h2
-	margin: 0\2
-	margin-bottom: 10px
 	text-transform: uppercase
 .wrapper
 	grid-template-columns: repeat(12, 1fr)
 .header
 	grid-column: span 12
 	grid-template-columns: repeat(3, min-content) repeat(9, 1fr)
-	grid-template-rows: min-content 1fr min-content 1fr
+	grid-template-rows: min-content min-content 1fr min-content 1fr
 	background: url('../img/background.jpeg')
 	height: 100vh
 	background-position: center
@@ -31,6 +29,32 @@ h2
 		position: absolute
 		width: 100%
 		height: 100%
+	.menu
+		position: fixed
+		width: 50px
+		height: 35px	
+		left: 5%
+		margin-top: 5%
+		z-index: 10
+		.menu1
+			width: 50px
+			height: 2px
+			background: #888a8c
+		.menu2
+			width: 50px
+			height: 2px
+			background: #888a8c
+			margin-top: 10px
+		.menu3
+			width: 50px
+			height: 2px
+			background: #888a8c
+			margin-top:  10px
+		.menu4
+			width: 50px
+			height: 2px
+			background: #888a8c
+			margin-top:  10px
 	.link
 		justify-self: center
 		margin-bottom: 20%
@@ -49,17 +73,16 @@ h2
 			color: $darc
 	h1
 		grid-column: span 12
-		grid-row: 2
+		grid-row: 3
 		justify-self: center
 		align-self: end
 		font-size: 5em
-		margin: 0
+		margin: 1% 0
 		font-size: 13em
 		z-index: 1
-		height: 65%
 	.hr
 		grid-column: span 12
-		grid-row: 3
+		grid-row: 4
 		min-width: 750px
 		height: 1px
 		background: $white
@@ -68,21 +91,49 @@ h2
 	h3
 		grid-column: span 12
 		justify-self: center
-		grid-row: 4
-		margin: 0
+		grid-row: 5
+		margin: 1% 0
 		font-weight: 100
 		z-index: 1
 		font-size: 100px
-		// margin-top: -25px
 		font-weight: 100
+	.phone
+		grid-column: 12/span 2
+		grid-row: 1
+		z-index: 1
+		color: #fff
+		position: relative
+	.email
+		grid-column: 12/span 2
+		grid-row: 2
+		z-index: 1
+		color: #fff
+		position: relative
+	i
+		grid-column: span 4
+		z-index: 1
+		font-style: normal
+		color: #7C7C7C
+		position: absolute
+		font-size: 20px
+		top: -4px
+		left: -20px
+	span
+		z-index: 1
+		font-weight: 100
+		padding: 5px
+		color: #f1f1f1
 .section
 	grid-column: span 12
 	grid-template-columns: repeat(12, 1fr)
 	color: $darc
+	margin: 0
+	padding: 0
 	h2
 		grid-column: span 12
 		justify-self: center
 		text-transform: uppercase
+		margin: 3%
 	article
 		grid-column: 2/span 4
 		font-size: 1.2em
@@ -91,10 +142,10 @@ h2
 			margin-top: 0
 			font-style: italic
 	.photo
-		grid-column: 8/span 4
+		grid-column: 8/span 3
 		justify-self: end
 		img
-			width: 55%
+			width: 100%
 			height: auto
 			border-radius: 100%
 	.hrwert
@@ -128,6 +179,7 @@ h2
 		grid-column: span 12
 		justify-self: center
 		text-transform: uppercase
+		margin: 3%
 	.portfolioimg
 		grid-column: span 12
 		grid-template-columns: repeat(auto-fit,minmax(150px, 1fr))
@@ -208,17 +260,20 @@ h2
 	h2
 		grid-column: span 6
 		text-align: center
-		padding: 0px 10px
 	.costsall
-		border: $border
 		grid-template-rows: repeat(4, min-content) 1fr min-content
+		grid-template-columns: 1fr
 		background: $light
 		color: $darc
+		margin: 25px 0
+		.br
+			height: 10px
 		h2
 			grid-row: 1
 			color: $darc
 			font-size: 1.5em
 			text-transform: uppercase
+			line-height: 40px
 		span
 			grid-row: 3
 			grid-column: span 6
@@ -228,22 +283,13 @@ h2
 			font-size: 2em
 		ol
 			grid-row: 5
+			padding-right: 10px
 		a
 			grid-row: 6
 			grid-column: span 6
-			justify-self: center
-			margin-top: 10%
-			margin-bottom: 10%
+			margin: 10%
 			background: $darc
-			color: $lightplus
-			text-transform: uppercase
-			border: none
-			padding: 3% 20%
-			cursor: pointer
-			text-decoration: none
-			transition: 0.5s
-			&:hover
-				color: $black
+
 		.hr1
 			background: #262526
 			border: none
@@ -275,7 +321,8 @@ h2
 	grid-column: span 12
 	background: url("../img/feedback.png")
 	grid-template-columns: 1fr
-	margin-top: 1vh
+	background-size: cover
+	background-position: center
 	h2
 		text-align: center
 		color: $light
@@ -284,9 +331,9 @@ h2
 		color: $light
 	.contactbox
 		grid-column: 1
-		margin: 0 14%
+		margin: 0 14% 2%
 		grid-template-columns: 1fr min-content 1fr
-		background: $accentminus
+		background: rgba(175, 178, 183, .4);
 		padding: 20px
 		.address
 		grid-column: 1
@@ -302,7 +349,7 @@ h2
 	.address
 		grid-template-columns: min-content 1fr
 		grid-template-rows: repeat(5, min-content)
-		grid-row-gap: 5px
+		grid-row-gap: 15px
 		grid-column-gap: 50px
 		justify-self: center
 		width: 70%
@@ -312,28 +359,19 @@ h2
 		.fa
 			align-self: center
 			color: $light
-	.feedback
-		grid-template-rows: repeat(4, min-content)
-		grid-row-gap: 5px
-		width: 70%
-		justify-self: center
-		input
-			padding: 2px
-			color: $accent
-			border: none
-		textarea
-			height: 150px
-			color: $accent
-			border: none
-		input[type="submit"]
-			width: 150px
-			justify-self: end
-			color: $accent
-			background: $white
 	footer
 		grid-template-columns: repeat(12 ,1fr)
+		align-content: center
 		margin-top: 5px
 		color: $darc
+		min-height: 50px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			background: rgba(95%, 95%, 95%, .2)
 		span:nth-of-type(1)
 			grid-column: 1/span 2
 			justify-self: center
@@ -343,8 +381,11 @@ h2
 		span:nth-of-type(3)
 			grid-column: 9/span 2
 			justify-self: center
+		span
+			z-index: 1
 		.cosial
 			grid-column: 11 /span 2
+			z-index: 1
 			a
 				color: $darc
 				text-decoration: none
@@ -377,5 +418,50 @@ h2
 		align-self: start
 		z-index: 1
 		font-size: 2em
+.feedback
+	grid-template-rows: repeat(4, min-content)
+	grid-row-gap: 5px
+	width: 70%
+	justify-self: center
+	input
+		padding: 2px
+		color: $accent
+		border: none
+	textarea
+		height: 150px
+		color: $accent
+		border: none
+	input[type="submit"]
+		width: 150px
+		justify-self: end
+		color: $accent
+		background: $white
+#test
+	label
+		color: rgba(0, 0, 0, 0.87)
+	textarea
+		outline: none
+		padding-top: 10px
+		color: rgba(0, 0, 0, 0.87)
+	input[type="submit"]
+		width: 100%
+		height: 100%
+		background: none
+		color: #fff
+		outline: none
+	i
+		background: #262526
+	.input-field input[type=text]
+		border-bottom: 1px solid rgba(0, 0, 0, 0.87)
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.87)
+	.input-field input[type=text]:focus
+		border-bottom: 1px solid rgba(0, 0, 0, 0.47)
+		box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.47)
+	.input-field input[type=text].invalid
+		border-bottom: 1px solid #AFB2B7FF
+		box-shadow: 0 1px 0 0 red
+	.input-field input[type=text].valid
+		border-bottom: 1px solid #007F0E
+		box-shadow: 0 1px 0 0 #007F0E
 // ADAPTIVE
 @import media
