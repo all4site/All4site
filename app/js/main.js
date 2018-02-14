@@ -8,10 +8,10 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		var top = ($(document).scrollTop());
 		if (top >= 300) {
-			$('.circle').css('opacity','1');
+			$('.circlebottom').css('opacity','1');
 		}
 		else{
-			$('.circle').css('opacity','0');
+			$('.circlebottom').css('opacity','0');
 		}
 	});
 	

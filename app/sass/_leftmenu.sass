@@ -1,0 +1,27 @@
+#slide-out
+	background: url("../img/steps2.png")
+	background-size: cover
+	background-position: center
+	color: #fff
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(255, 255, 255, .6)
+.side-nav
+	li
+		a:hover
+			background: #f1f1f1
+	li
+		&:nth-of-type(7)
+			margin-top: 45vh
+	.cocial
+		grid-template-columns: repeat(3, 1fr)
+		justify-items: center
+		margin-top: 5%
+		a
+			background: #333
+.user-view
+	z-index: 1
+	justify-items: center

@@ -65,7 +65,7 @@ h5 {
 h6 {
   font-size: 1.6rem; }
 
-.circle {
+.circlebottom {
   opacity: 0;
   width: 80px;
   height: 80px;
@@ -77,9 +77,9 @@ h6 {
   -webkit-transition: 1s;
   transition: 1s;
   z-index: 2; }
-  .circle:hover {
+  .circlebottom:hover {
     background: #7f8084; }
-  .circle .circleimg {
+  .circlebottom .circleimg {
     background: url("../img/up-arrow.svg");
     width: 40px;
     height: 40px;
@@ -122,6 +122,35 @@ input[type="hidden"] {
   #modal3 .feedback textarea,
   #modal4 .feedback textarea {
     display: none; }
+
+#slide-out {
+  background: url("../img/steps2.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff; }
+  #slide-out:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6); }
+
+.side-nav li a:hover {
+  background: #f1f1f1; }
+
+.side-nav li:nth-of-type(7) {
+  margin-top: 45vh; }
+
+.side-nav .cocial {
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin-top: 5%; }
+  .side-nav .cocial a {
+    background: #333; }
+
+.user-view {
+  z-index: 1;
+  justify-items: center; }
 
 textarea {
   resize: none; }
