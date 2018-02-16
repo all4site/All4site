@@ -16,21 +16,17 @@ $(document).ready(function(){
 	});
 	
 });
+
+
 // Плавная прокрутка
-$(document).ready(function() {
-	$('a[href^="#contact"]').click(function() {
-		var target = $(this).attr('href');
-		$('html, body').animate({ scrollTop: $(target).offset().top - 90 }, 1000);
-	});   
-	$('a[href^="#top"]').click(function() {
-		var target = $(this).attr('href');
-		$('html, body').animate({ scrollTop: $(target).offset().top - 90 }, 1000);
-	});
-	$('a[href^="#costs"]').click(function() {
-		var target = $(this).attr('href');
-		$('html, body').animate({ scrollTop: $(target).offset().top - 90 }, 1000);
-	});
-});
+  $(document).ready(function() {
+    $('a[data-target="menu"]').click(function() {
+        var target = $(this).attr('href');
+        $('a').removeClass('active');
+        $(this).addClass('active');
+        $('html, body').animate({ scrollTop: $(target).offset().top}, 700);
+    });
+  });
 
 // Почта заказ
 $(document).ready(function() {

@@ -16,7 +16,7 @@ h2
 .header
 	grid-column: span 12
 	grid-template-columns: repeat(3, min-content) repeat(9, 1fr)
-	grid-template-rows: min-content min-content 1fr min-content 1fr
+	grid-template-rows: min-content min-content min-content min-content min-content
 	background: url('../img/background.jpeg')
 	height: 100vh
 	background-position: center
@@ -77,35 +77,34 @@ h2
 		grid-row: 3
 		justify-self: center
 		align-self: end
-		font-size: 5em
-		margin: 1% 0
-		font-size: 13em
+		margin-top: 200px
+		font-size: 17vw
 		z-index: 1
 	.hr
 		grid-column: span 12
 		grid-row: 4
-		min-width: 750px
+		width: 65vw
 		height: 1px
 		background: $white
 		z-index: 1
 		justify-self: center
 	h3
 		grid-column: span 12
-		justify-self: center
+		text-align: center
 		grid-row: 5
 		margin: 1% 0
 		font-weight: 100
 		z-index: 1
-		font-size: 100px
+		font-size: 6vw
 		font-weight: 100
 	.phone
-		grid-column: 12/span 2
+		grid-column: 12
 		grid-row: 1
 		z-index: 1
 		color: #fff
 		position: relative
 	.email
-		grid-column: 12/span 2
+		grid-column: 12
 		grid-row: 2
 		z-index: 1
 		color: #fff
@@ -143,10 +142,10 @@ h2
 			margin-top: 0
 			font-style: italic
 	.photo
-		grid-column: 8/span 3
+		grid-column: 9/span 3
 		justify-self: end
 		img
-			width: 100%
+			width: 30vw
 			height: auto
 			border-radius: 100%
 	.hrwert
@@ -213,7 +212,7 @@ h2
 	margin-top: 5%
 	h2
 		grid-column: span 12
-		justify-self: center
+		text-align: center
 		text-transform: uppercase
 		color: $darc
 	.boxcontainer
