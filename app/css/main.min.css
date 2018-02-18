@@ -322,14 +322,8 @@ h2 {
     background-size: cover;
     background-position: center;
     width: 100%;
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
     -webkit-transition: 1s;
-    transition: 1s;
-    margin-top: -8px; }
-    .portfolio img:hover {
-      -webkit-filter: grayscale(0%);
-              filter: grayscale(0%); }
+    transition: 1s; }
   .portfolio h2 {
     grid-column: span 12;
     justify-self: center;
@@ -337,9 +331,9 @@ h2 {
     margin: 3%; }
   .portfolio .portfolioimg {
     grid-column: span 12;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    grid-template-columns: repeat(2, 1fr); }
     .portfolio .portfolioimg .img {
-      grid-column: span 4;
+      grid-column: span 1;
       display: grid;
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
@@ -348,7 +342,8 @@ h2 {
       -webkit-transition: all 1s;
       transition: all 1s; }
       .portfolio .portfolioimg .img a {
-        position: relative; }
+        position: relative;
+        display: grid; }
         .portfolio .portfolioimg .img a::before {
           content: '';
           position: absolute;
@@ -390,28 +385,26 @@ h2 {
             justify-content: center;
     margin: 5% 0; }
     .dosite .boxcontainer .box {
-      display: grid;
       grid-column: span 1;
+      grid-template-rows: -webkit-min-content min-content;
+      grid-template-rows: min-content min-content;
       background: #d7d8da;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      width: 300px;
-      height: 300px;
-      border-radius: 100%;
+      width: 20vw;
+      height: 20vw;
+      border-radius: 50%;
       -webkit-transition: all 1s;
       transition: all 1s; }
       .dosite .boxcontainer .box h2 {
         text-align: center;
         -ms-flex-item-align: center;
             align-self: center;
-        font-size: 3em;
         z-index: 1; }
       .dosite .boxcontainer .box span {
-        margin-top: -25%;
         text-transform: uppercase;
-        font-weight: 500;
-        font-size: 1.5em;
+        font-size: 1.7vh;
         z-index: 1; }
     .dosite .boxcontainer .box:nth-of-type(1):hover {
       background: #D99D26; }
@@ -653,8 +646,6 @@ h2 {
           box-shadow: 0 1px 0 0 #007F0E; }
 
 @media only screen and (max-width: 1280px) {
-  .portfolio .portfolioimg .img {
-    grid-column: span 2; }
   .dosite .boxcontainer .arrow::after {
     width: 52%; }
   .dosite .boxcontainer .bable:nth-of-type(2n+1)::after {
@@ -667,6 +658,8 @@ h2 {
     font-size: 1.3em; } }
 
 @media only screen and (max-width: 1024px) {
+  .portfolio .portfolioimg .img {
+    grid-column: span 2; }
   .section {
     grid-template-rows: repeat(3, auto); }
     .section h2 {

@@ -170,11 +170,11 @@ h2
 		background-size: cover
 		background-position: center
 		width: 100%
-		filter: grayscale(100%)
+		// filter: grayscale(100%)
 		transition: 1s
-		margin-top: -8px
-		&:hover
-			filter: grayscale(0%)
+		// margin-top: -8px
+		// &:hover
+		// 	filter: grayscale(0%)
 	h2
 		grid-column: span 12
 		justify-self: center
@@ -182,15 +182,16 @@ h2
 		margin: 3%
 	.portfolioimg
 		grid-column: span 12
-		grid-template-columns: repeat(auto-fit,minmax(150px, 1fr))
+		grid-template-columns: repeat(2, 1fr)
 		.img
-			grid-column: span 4
+			grid-column: span 1
 			display: grid
 			align-items: stretch
 			position: relative
 			transition: all 1s
 			a
 				position: relative
+				display: grid
 				&::before
 					content: ''
 					position: absolute
@@ -225,24 +226,21 @@ h2
 		justify-content: center
 		margin: 5% 0
 		.box
-			display: grid
 			grid-column: span 1
+			grid-template-rows: min-content min-content
 			background: $lightplus
 			justify-content: center
-			width: 300px
-			height: 300px
-			border-radius: 100%
+			width: 20vw
+			height: 20vw
+			border-radius: 50%
 			transition: all 1s
 			h2
 				text-align: center
 				align-self: center
-				font-size: 3em
 				z-index: 1
 			span
-				margin-top: -25%
 				text-transform: uppercase
-				font-weight: 500
-				font-size: 1.5em
+				font-size: 1.7vh
 				z-index: 1
 		.box:nth-of-type(1)
 			&:hover
