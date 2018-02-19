@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		var top = ($(document).scrollTop());
 		if (top >= 300) {
-			$('.circlebottom').css('opacity','1');
+			$('.circlebottom').css('opacity','0.6');
 		}
 		else{
 			$('.circlebottom').css('opacity','0');
