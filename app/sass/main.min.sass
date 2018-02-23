@@ -4,11 +4,12 @@
 @import circle
 @import order
 @import leftmenu
+@import wawes
 
-
+.btn-floating i
+	width: 100%
 textarea
 	resize: none
-
 h2
 	text-transform: uppercase
 .wrapper
@@ -140,6 +141,10 @@ h2
 		text-indent: 20px
 		p
 			margin-top: 0
+		a
+			background: $darc
+			&:hover
+				background: lighten($darc, 10%)
 	.photo
 		grid-column: 9/span 3
 		justify-self: end
@@ -233,7 +238,7 @@ h2
 			width: 20vw
 			height: 20vw
 			border-radius: 50%
-			transition: all 1s
+			transition: background 1s ease
 			h2
 				text-align: center
 				align-self: center
@@ -253,65 +258,60 @@ h2
 					background: #A4B650 	
 .costs
 	grid-column: span 12
-	grid-template-columns: 12% repeat(4, 1fr) 12% 
+	grid-template-columns: 1fr
 	grid-column-gap: 2%
 	h2
-		grid-column: span 6
+		grid-column: span 1
 		text-align: center
-	.costsall
-		grid-template-rows: repeat(4, min-content) 1fr min-content
-		grid-template-columns: 1fr
-		background: $light
-		color: $darc
-		margin: 25px 0
-		.br
-			height: 10px
-		h2
-			grid-row: 1
+	.cards
+		grid-column: 1
+		grid-template-columns: repeat(4, minmax(260px,320px))
+		justify-self: center
+		grid-column-gap: 2%
+		margin: 0 50px 0 50px
+		.costsall
+			grid-template-rows: repeat(4, min-content) 1fr min-content
+			grid-column: span 1
+			background: $light
 			color: $darc
-			font-size: 1.5em
-			text-transform: uppercase
-			line-height: 40px
-		span
-			grid-row: 3
-			grid-column: span 6
-			text-align: center
-			margin: 0
-			font-weight: 100
-			font-size: 2em
-		ol
-			grid-row: 5
-			padding-right: 10px
-		a
-			grid-row: 6
-			grid-column: span 6
-			margin: 10%
-			background: $darc
-
-		.hr1
-			background: #262526
-			border: none
-			grid-row: 2
-			grid-column: span 6
-			justify-self: center
-			width: 80%
-			height: 1px
-		.hr2
-			background: #262526
-			border: none
-			grid-row: 4
-			grid-column: span 6
-			justify-self: center
-			width: 50%
-			height: 1px
-	.costsall:nth-of-type(1)
-		grid-column: 2
-	.costsall:nth-of-type(2)
-		grid-column: 3
-	.costsall:nth-of-type(3)
-		grid-column: 4
-	.costsall:nth-of-type(4)
-		grid-column: 5
+			.br
+				height: 10px
+			h2
+				grid-row: 1
+				color: $darc
+				font-size: 1.5em
+				text-transform: uppercase
+				line-height: 40px
+				grid-column: 1
+			span
+				grid-row: 3
+				text-align: center
+				margin: 0
+				font-weight: 100
+				font-size: 2em
+			ol
+				grid-row: 5
+				padding-right: 10px
+			a
+				grid-row: 6
+				margin: 10%
+				background: $darc
+				&:hover
+					background: lighten($darc, 10%)
+			.hr1
+				background: #262526
+				border: none
+				grid-row: 2
+				justify-self: center
+				width: 80%
+				height: 1px
+			.hr2
+				background: #262526
+				border: none
+				grid-row: 4
+				justify-self: center
+				width: 50%
+				height: 1px
 .action
 	color: red
 	font-weight: bold
@@ -449,6 +449,8 @@ h2
 		outline: none
 	i
 		background: #262526
+		&:hover
+			background: lighten($darc, 10%)
 	.input-field input[type=text]
 		border-bottom: 1px solid rgba(0, 0, 0, 0.87)
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.87)

@@ -10,9 +10,15 @@
 				&:nth-of-type(2n)::after
 					bottom: 88%
 					right: 10%
+	.costs
+		.cards
+			grid-column-gap: 1%
+@media only screen and (max-width: 1170px)
+	.costs
+		.cards
+			grid-template-columns: repeat(2, minmax(260px,420px))
+			grid-column-gap: 2%
 @media only screen and (max-width: 1024px)
-	body
-		font-size: 13px
 	.portfolio
 		.portfolioimg
 			.img
@@ -24,23 +30,13 @@
 		article
 			grid-row: 3
 			grid-column: 2/span 10
+			a
+				width: 50%
+				justify-self: center
 		.photo
 			grid-row: 2
 			grid-column: span 12
 			justify-self: center
-	.costs
-		grid-template-columns: 10% repeat(4, 1fr) 10%
-	.contact .contactbox
-		margin: 0 10% 2%
-@media only screen and (max-width: 850px)
-	.costs .costsall:nth-of-type(2)
-		grid-column: span 2
-	.costs .costsall:nth-of-type(4)
-		grid-column: span 2
-	.costs .costsall:nth-of-type(1)
-		grid-column: 2/span 2
-	.costs .costsall:nth-of-type(3)
-		grid-column: 2/span 2
 @media only screen and (max-width: 800px)
 	h2
 		font-size: 2.7em
@@ -52,7 +48,7 @@
 				width: 200px
 				height: 200px
 				margin-top: 3%
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 650px)
 	.side-nav li:nth-of-type(7)
 		margin-top: 10vh
 	.header
@@ -73,7 +69,6 @@
 			grid-row: 7
 			grid-column: 6
 			font-size: 5vw
-
 	.section
 		grid-template-rows: repeat(3, auto)
 		h2
@@ -93,28 +88,6 @@
 			grid-column: span 12
 			.img
 				grid-column: span 4
-	.dosite
-		background: url('../img/steps2.png')
-	.costs
-		grid-template-rows: min-content 1fr 1fr
-		grid-template-columns: 1fr 5px 1fr
-		margin: 10px
-		grid-column-gap: 0
-		grid-row-gap: 5px
-		h2
-			grid-row: 1
-		.costsall:nth-of-type(1)
-			grid-column: 1
-			grid-row: 2
-		.costsall:nth-of-type(2)
-			grid-column: 3
-			grid-row: 2
-		.costsall:nth-of-type(3)
-			grid-row: 3
-			grid-column: 1
-		.costsall:nth-of-type(4)
-			grid-row: 3
-			grid-column: 3
 	.contact
 		.address
 			width: 90%
@@ -134,12 +107,14 @@
 				grid-column: span 3
 			.cosial
 				grid-column: span 3
+	.costs
+		.cards
+			grid-template-columns: minmax(260px, 1fr)
 @media only screen and (max-width: 450px)
-
-	h2
-		font-size: em
+	.costs
+		.cards
+			margin: 0 10px
 	.header
-		background: url('../img/header320.jpeg')
 		.link
 			display: none
 		h1
@@ -149,33 +124,15 @@
 			grid-column: span 12
 			justify-self: cente
 	.section
-		h2
-			margin: 
+		article
+			a
+				width: 100%
 	.portfolio
 		h2
 			text-align: center
 			// margin: 0
 	.dosite
 		display: none
-	.costs
-		grid-template-columns: 1fr
-		grid-template-rows: 1fr
-		h2
-			grid-column: span 6
-		.costsall
-			margin: 0
-		.costsall:nth-of-type(1)
-			grid-column: 1
-			grid-row: 2
-		.costsall:nth-of-type(2)
-			grid-column: 1
-			grid-row: 3
-		.costsall:nth-of-type(3)
-			grid-column: 1
-			grid-row: 4
-		.costsall:nth-of-type(4)
-			grid-column: 1
-			grid-row: 5
 	.contact
 		.contactbox
 			grid-template-rows: 1fr repeat(2, min-content)
@@ -206,4 +163,7 @@
 				justify-self: center
 			span:nth-of-type(3)
 				grid-column: span 4
+	.feedback
+		i
+			width: 100% !important
 

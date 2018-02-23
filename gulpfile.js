@@ -120,6 +120,7 @@ gulp.task('browser-sync', function () {
 		server: {
 			baseDir: 'app'
 		},
+		port: 80,
 		notify: false
 	});
 });
